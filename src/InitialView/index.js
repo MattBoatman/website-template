@@ -61,20 +61,24 @@ const StyledH1 = styled.h1`
 `;
 
 const StyledP = styled.p`
-color: rgba(255, 255, 255, 0.85);
-font-size: 1.75em;
-@media (max-width: 600px) {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.75em;
+  @media (max-width: 600px) {
     font-size: 1em;
   }
 `;
-
 
 const InitialView = () => {
   return (
     <Wrapper>
       <Banner>
         <StyledH1>Lorem Ipsum</StyledH1>
-        <StyledP>Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah</StyledP>
+        <StyledP>
+          BVivamus efficitur vel erat sed facilisis. Nunc eu maximus lorem.
+          Vestibulum eget purus aliquam felis rutrum facilisis. Phasellus vel
+          nisl sem. Fusce dapibus magna id condimentum eleifend. Curabitur a
+          dolor magna.
+        </StyledP>
       </Banner>
     </Wrapper>
   );
