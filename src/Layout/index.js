@@ -3,6 +3,9 @@ import InitialView from "../InitialView";
 import Section from "../Section";
 import Footer from "../Footer";
 import beach from "../InitialView/beach.jpg";
+import kim from "../kim.png";
+import hands from "../hands.jpg";
+import dallas from "../dallas.jpg";
 
 const Layout = () => {
   return (
@@ -11,21 +14,43 @@ const Layout = () => {
       <Section
         backgroundColor="#f7f9fb"
         color="#424242"
+        title="Dallas Outcall Massage"
         paragraphs={[
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum, erat eu elementum mattis, arcu mauris venenatis elit, ac ullamcorper diam lectus eget quam. Suspendisse finibus odio quis felis malesuada, at lacinia lorem gravida. Duis ultrices a sapien et sagittis. Sed laoreet molestie vulputate. Mauris at diam nulla. Fusce dignissim semper est. Mauris eu leo at eros iaculis auctor. Ut elit tellus, accumsan nec elit sed, viverra elementum nisi. Curabitur a elit at metus imperdiet iaculis. Quisque vel quam ut erat convallis semper sed nec metus. Curabitur pharetra sem eleifend turpis euismod, vitae porta urna maximus.",
-          "Curabitur turpis lacus, tristique nec quam vitae, euismod facilisis neque. Quisque eu pharetra mauris. Mauris nec nulla interdum, porttitor dolor quis, pharetra metus. In convallis sem lacus, a commodo dui dignissim sed. In viverra sapien sem, eget tincidunt felis congue at. Nulla auctor id leo non pulvinar. Cras eget porta libero, eu rutrum nisl."
+          "Kimberly offers 24/7 mobile massage, so you don't have to stress about transportation, traffic, or parking.",
+          "If you are calling from a DFW airport hotel, Kimberly will be there in as little as 30 minutes."
         ]}
-        imageSrc={beach}
+        imageSrc={dallas}
+        id="dallasMassage"
+        buttonText="About Kimberly"
+        scrollId="aboutKimberly"
       />
       <Section
-        backgroundColor="#8FC1E3"
-        color="#f7f9fb"
+        backgroundColor="#687864"
+        color="#ffffff"
+        title="About Kimberly"
         paragraphs={[
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum, erat eu elementum mattis, arcu mauris venenatis elit, ac ullamcorper diam lectus eget quam. Suspendisse finibus odio quis felis malesuada, at lacinia lorem gravida. Duis ultrices a sapien et sagittis. Sed laoreet molestie vulputate. Mauris at diam nulla. Fusce dignissim semper est. Mauris eu leo at eros iaculis auctor. Ut elit tellus, accumsan nec elit sed, viverra elementum nisi. Curabitur a elit at metus imperdiet iaculis. Quisque vel quam ut erat convallis semper sed nec metus. Curabitur pharetra sem eleifend turpis euismod, vitae porta urna maximus.",
-          "Curabitur turpis lacus, tristique nec quam vitae, euismod facilisis neque. Quisque eu pharetra mauris. Mauris nec nulla interdum, porttitor dolor quis, pharetra metus. In convallis sem lacus, a commodo dui dignissim sed. In viverra sapien sem, eget tincidunt felis congue at. Nulla auctor id leo non pulvinar. Cras eget porta libero, eu rutrum nisl."
+          "Kimberly is a professionally licensed massage therapist (TX license MT#005028). She has over 25 years of professional experience. She is on call 24 hours a day, so call at anytime and Kimberly will make your stress a thing of the past!"
+        ]}
+        imageSrc={kim}
+        id="aboutKimberly"
+        buttonText="Services"
+        scrollId="services"
+      />
+      <Section
+        backgroundColor="#31708E"
+        color="#f7f9fb"
+        title="Services"
+        paragraphs={[
+          "Your massage can include all of the following services",
+          "- Swedish Relaxation",
+          "- Full body therapy",
+          "- Light touch to deep tissue rub pressure",
+          "- Reflexology",
+          "- Unscented organic products"
         ]}
         flipPhoto
-        imageSrc={beach}
+        imageSrc={hands}
+        id="services"
       />
       <Footer />
     </div>

@@ -4,7 +4,18 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <Wrapper>
-      <Copy>© Untitled. All rights reserved. Design and Development: <A target="_blank" href="http://matthewboatman.com/">Matt Boatman </A></Copy>
+      <Copy>
+        © Untitled. All rights reserved. Design and Development:{" "}
+        <A target="_blank" href="http://matthewboatman.com/">
+          Matt Boatman{" "}
+        </A>
+      </Copy>
+      <Copy>
+        Reach Dallas Outcall Massage at{" "}
+        <A href="tel:817-301-8334">
+        (817) 301-8334
+        </A>
+      </Copy>
     </Wrapper>
   );
 };
@@ -21,6 +32,7 @@ const Copy = styled.div`
   text-align: center;
 `;
 const A = styled.a`
-    text-decoration: none;
+  text-decoration: none;
+  color: #bfbfbf;
 `;
 export default Footer;

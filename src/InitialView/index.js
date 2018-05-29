@@ -2,6 +2,28 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import beach from "./beach.jpg";
 
+const handleClick = () => {
+  document
+    .getElementById("dallasMassage")
+    .scrollIntoView({ behavior: "smooth" });
+};
+const InitialView = () => {
+  return (
+    <Wrapper>
+      <Banner>
+        <StyledH1>Outcall Massage Therapy by Kimberly</StyledH1>
+        <StyledP>
+          Stressed? Bring the relaxation straight to your door. Kimberly offers 24/7 relaxation
+          to hotel guests in Dallas, Grapevine, Las Colinas, Irving, Lewisville,
+          and more! Call now{' '}
+          <A href="tel:817-301-8334">(817) 301-8334</A>
+        </StyledP>
+        <Button onClick={handleClick}>Learn More</Button>
+      </Banner>
+    </Wrapper>
+  );
+};
+
 const fadeInOpacity = keyframes`
 0% {
     opacity: 1;
@@ -55,8 +77,24 @@ const Banner = styled.div`
 
 const StyledH1 = styled.h1`
   font-size: 3em;
-  @media (max-width: 600px) {
-    font-size: 1.5em;
+`;
+
+const Button = styled.button`
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+  :hover {
+    background-color: #e7e7e7;
   }
 `;
 
@@ -68,20 +106,8 @@ const StyledP = styled.p`
   }
 `;
 
-const InitialView = () => {
-  return (
-    <Wrapper>
-      <Banner>
-        <StyledH1>Lorem Ipsum</StyledH1>
-        <StyledP>
-          BVivamus efficitur vel erat sed facilisis. Nunc eu maximus lorem.
-          Vestibulum eget purus aliquam felis rutrum facilisis. Phasellus vel
-          nisl sem. Fusce dapibus magna id condimentum eleifend. Curabitur a
-          dolor magna.
-        </StyledP>
-      </Banner>
-    </Wrapper>
-  );
-};
+const A = styled.a`
+  color: rgba(255, 255, 255, 0.85);
+`;
 
 export default InitialView;
