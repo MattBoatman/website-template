@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import beach from "./beach.jpg";
+import { Helmet } from "react-helmet";
 
 const handleClick = () => {
   document
@@ -10,13 +11,24 @@ const handleClick = () => {
 const InitialView = () => {
   return (
     <Wrapper>
+      <Helmet>
+        <title>Dallas Outcall Massage</title>
+        <meta
+          name="description"
+          content="Dallas outcall massage offered. Call today and Kimberly will come to you!"
+        />
+        <meta property="og:url" content="http://dallasoutcallmassage.com" />
+        <meta property="og:title" content="Dallas Outcall Massage" />
+      </Helmet>
       <Banner>
         <StyledH1>Outcall Massage Therapy by Kimberly</StyledH1>
+        <StyledH3>
+      <A href="tel:817-301-8334">(817) 301-8334</A>
+        </StyledH3>
         <StyledP>
-          Stressed? Bring the relaxation straight to your door. Kimberly offers 24/7 relaxation
-          to hotel guests in Dallas, Grapevine, Las Colinas, Irving, Lewisville,
-          and more! Call now{' '}
-          <A href="tel:817-301-8334">(817) 301-8334</A>
+          Stressed? Bring the relaxation straight to your door. Kimberly offers
+          24/7 relaxation to hotel guests in Dallas, Grapevine, Las Colinas,
+          Irving, Lewisville, and more! Call now!
         </StyledP>
         <Button onClick={handleClick}>Learn More</Button>
       </Banner>
@@ -60,8 +72,8 @@ const Wrapper = styled.div`
     width: 100vw;
     animation-name: ${fadeInOpacity};
     animation-timing-function: ease-in;
-    animation-duration: 2s;
-    animation-delay: 1.5s;
+    animation-duration: 0.75s;
+    animation-delay: 0.75s;
     animation-fill-mode: forwards;
   }
 `;
@@ -79,20 +91,24 @@ const StyledH1 = styled.h1`
   font-size: 3em;
 `;
 
+const StyledH3 = styled.h3`
+  font-size: 2em;
+`;
+
 const Button = styled.button`
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    border: 2px solid #e7e7e7;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
   :hover {
     background-color: #e7e7e7;
   }

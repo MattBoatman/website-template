@@ -25,8 +25,8 @@ const Layout = () => {
         scrollId="aboutKimberly"
       />
       <Section
-        backgroundColor="#687864"
-        color="#ffffff"
+        backgroundColor="#31708E"
+        color="#f7f9fb"
         title="About Kimberly"
         paragraphs={[
           "Kimberly is a professionally licensed massage therapist (TX license MT#005028). She has over 25 years of professional experience. She is on call 24 hours a day, so call at anytime and Kimberly will make your stress a thing of the past!"
@@ -35,10 +35,11 @@ const Layout = () => {
         id="aboutKimberly"
         buttonText="Services"
         scrollId="services"
+        flipPhoto
       />
       <Section
-        backgroundColor="#31708E"
-        color="#f7f9fb"
+        backgroundColor="#687864"
+        color="#ffffff"
         title="Services"
         paragraphs={[
           "Your massage can include all of the following services",
@@ -48,7 +49,6 @@ const Layout = () => {
           "- Reflexology",
           "- Unscented organic products"
         ]}
-        flipPhoto
         imageSrc={hands}
         id="services"
       />
