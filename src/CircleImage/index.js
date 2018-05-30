@@ -3,10 +3,10 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 
-const CircleImage = ({imageSrc, backgroundColor}) => {
+const CircleImage = ({imageSrc, backgroundColor, altText}) => {
     return (
         <ImageWrapper backgroundColor={backgroundColor}>
-            <Image src={imageSrc} />
+            <Image alt={altText} src={imageSrc} />
         </ImageWrapper>
     );
 };
@@ -23,6 +23,7 @@ const Image = styled.img`
 CircleImage.propTypes = {
     imageSrc: PropTypes.string.isRequired,
     backgroundColor: PropTypes.string.isRequired,
+    altText: PropTypes.string.isRequired,
   };
 
 export default CircleImage;

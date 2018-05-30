@@ -13,7 +13,8 @@ const Section = ({
   title,
   id,
   buttonText,
-  scrollId
+  scrollId,
+  altText
 }) => {
   const handleClick = () => {
     console.log(scrollId)
@@ -25,7 +26,7 @@ const Section = ({
     <StyledSection backgroundColor={backgroundColor} color={color} id={id}>
       <Wrapper flipPhoto={flipPhoto}>
         <WrapperImage>
-          <CircleImage imageSrc={imageSrc} backgroundColor={backgroundColor} />
+          <CircleImage alt="" imageSrc={imageSrc} backgroundColor={backgroundColor} />
         </WrapperImage>
         <WrapperText>
           <StyledH3>{title}</StyledH3>
@@ -47,6 +48,8 @@ const StyledSection = styled.section`
   padding: 6em 0 4em 0;
   background-color: ${props => props.backgroundColor};
   color: ${props => props.color};
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 `;
 const Wrapper = styled.div`
   width: 85%;
@@ -113,7 +116,8 @@ Section.propTypes = {
   paragraphs: PropTypes.array,
   flipPhoto: PropTypes.bool,
   imageSrc: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  altText: PropTypes.string.isRequired,
 };
 Section.defaultProps = {
   paragraphs: [],

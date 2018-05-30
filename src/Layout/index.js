@@ -23,6 +23,7 @@ const Layout = () => {
         id="dallasMassage"
         buttonText="About Kimberly"
         scrollId="aboutKimberly"
+        altText="Dallas"
       />
       <Section
         backgroundColor="#31708E"
@@ -36,6 +37,7 @@ const Layout = () => {
         buttonText="Services"
         scrollId="services"
         flipPhoto
+        altText="About"
       />
       <Section
         backgroundColor="#687864"
@@ -51,6 +53,7 @@ const Layout = () => {
         ]}
         imageSrc={hands}
         id="services"
+        altText="Services"
       />
       <Footer />
     </div>
