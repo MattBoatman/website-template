@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import CircleImage from "../CircleImage";
 
-
 const Section = ({
   backgroundColor,
   color,
@@ -14,19 +13,24 @@ const Section = ({
   id,
   buttonText,
   scrollId,
-  altText
+  altText,
+  addPhoneNumber
 }) => {
   const handleClick = () => {
-    console.log(scrollId)
+    console.log(scrollId);
     document
       .getElementById(scrollId)
-      .scrollIntoView({ block: 'center', behavior: "smooth" });
+      .scrollIntoView({ block: "center", behavior: "smooth" });
   };
   return (
     <StyledSection backgroundColor={backgroundColor} color={color} id={id}>
       <Wrapper flipPhoto={flipPhoto}>
         <WrapperImage>
-          <CircleImage alt="" imageSrc={imageSrc} backgroundColor={backgroundColor} />
+          <CircleImage
+            alt=""
+            imageSrc={imageSrc}
+            backgroundColor={backgroundColor}
+          />
         </WrapperImage>
         <WrapperText>
           <StyledH3>{title}</StyledH3>
@@ -35,6 +39,11 @@ const Section = ({
               {p}
             </StyledP>
           ))}
+          {addPhoneNumber && (
+            <A color={color} href="tel:817-301-8334">
+              Call now! (817) 301-8334
+            </A>
+          )}
           <StyledP />
           {scrollId && <Button onClick={handleClick}>{buttonText}</Button>}
         </WrapperText>
@@ -93,23 +102,28 @@ const StyledP = styled.p`
 `;
 
 const Button = styled.button`
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    border: 2px solid #e7e7e7;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
   :hover {
     background-color: #e7e7e7;
   }
 `;
+
+const A = styled.a`
+  color: ${props => props.color};
+`;
+
 Section.propTypes = {
   backgroundColor: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
@@ -118,10 +132,12 @@ Section.propTypes = {
   imageSrc: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   altText: PropTypes.string.isRequired,
+  addPhoneNumber: PropTypes.bool
 };
 Section.defaultProps = {
   paragraphs: [],
-  flipPhoto: false
+  flipPhoto: false,
+  addPhoneNumber: false
 };
 
 export default Section;

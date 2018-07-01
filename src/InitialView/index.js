@@ -23,12 +23,14 @@ const InitialView = () => {
       <Banner>
         <StyledH1>Outcall Massage Therapy by Kimberly</StyledH1>
         <StyledH3>
-      <A href="tel:817-301-8334">(817) 301-8334</A>
+          <A href="tel:817-301-8334">(817) 301-8334</A>
         </StyledH3>
         <StyledP>
-          Stressed? Bring the relaxation straight to your door. Kimberly offers
-          24/7 relaxation to hotel guests in Dallas, Grapevine, Las Colinas,
-          Irving, Lewisville, and more! Call now!
+          Stressed? Bring the relaxation straight to your door! Kimberly offers
+          24/7 relaxation to hotel guests around the DFW airpoirt, Dallas,
+          Grapevine, Las Colinas, Irving, and Lewisville areas. She services all
+          major hotels including The Gaylord, Marriott, Hilton, Embassy Suites,
+          Hyatt, Sheraton, Westin, Doubletree, and more. Call now!
         </StyledP>
         <Button onClick={handleClick}>Learn More</Button>
       </Banner>
