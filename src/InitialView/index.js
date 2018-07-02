@@ -27,7 +27,7 @@ const InitialView = () => {
         </StyledH3>
         <StyledP>
           Stressed? Bring the relaxation straight to your door! Kimberly offers
-          24/7 relaxation to hotel guests around the DFW airpoirt, Dallas,
+          24/7 relaxation to hotel guests around the DFW airport, Dallas,
           Grapevine, Las Colinas, Irving, and Lewisville areas. She services all
           major hotels including The Gaylord, Marriott, Hilton, Embassy Suites,
           Hyatt, Sheraton, Westin, Doubletree, and more. Call now!
